@@ -8,7 +8,7 @@
 		<title>Cafe with a Vue</title>
 	</head>
 	<body>
-		<div class="app">
+		<div id="app" class="app">
 			<h1>La belle vue</h1>
 			<p class="description">
 				Bienvenue dans notre café la belle vue ! Nous sommes réputés pour notre
@@ -16,9 +16,31 @@
 				ou avec un goûter réconfortant. Mais attention, vous verrez qu'il est
 				difficile de s'arrêter.
 			</p>
+			<H1>{{ message }}</H1>
+			<h1> La reponse à la vie {{ answerToLife }}</h1>
+			
 			<footer class="footer">
 				<p>Copyright La belle vue 2020</p>
 			</footer>
 		</div>
+		<script>
+			// Vue n'est pas encore chargé donc une RefenreceError devrait être retournée
+			console.log(Vue)
+			</script>
+			<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+			<script>
+				const app = new Vue({
+					el: '#app',
+					data: {
+						message:'Bonjour Skander',
+						answerToLife:42,
+						styles:['Techno','Hiphop','RnB'],
+						timeForLunch: false,
+						info:{
+							topic:'VueJS',
+							length:5
+						}
+					}})
+			  </script>
 	</body>
 </html>
